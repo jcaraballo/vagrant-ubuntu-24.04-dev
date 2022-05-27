@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo 'Installing OpenJDK 11'
-apt-get install -y openjdk-11-jdk openjdk-11-source
+echo 'Installing OpenJDK 18'
+apt-get install -y openjdk-18-jdk openjdk-18-source
 
