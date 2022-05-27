@@ -1,9 +1,9 @@
-# vagrant-ubuntu-20.04-dev
+# vagrant-ubuntu-22.04-dev
 
-Vagrant/VirtualBox configuration to build an Ubuntu Desktop 20.04 LTS (Focal Fossa) for development
+Vagrant/VirtualBox configuration to build an Ubuntu Desktop 22.04 LTS (Jammy Jellyfish) for development
 
-It's based on the box [jcaraballo/ubuntu-desktop-focal](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-focal),
-created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-focal)
+It's based on the box [jcaraballo/ubuntu-desktop-jammy](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-jammy),
+created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-jammy)
 
 ## Requirements
 
@@ -36,13 +36,13 @@ VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpa
 ### Clone this repository
 E.g.:
 ```
-git clone https://github.com/jcaraballo/vagrant-ubuntu-20.04-dev.git
+git clone https://github.com/jcaraballo/vagrant-ubuntu-22.04-dev.git
 ```
 
 ### Make it your current directory
 E.g. after the step above:
 ```
-cd vagrant-ubuntu-20.04-dev
+cd vagrant-ubuntu-22.04-dev
 ```
 
 ### Resources
@@ -87,9 +87,9 @@ cp -iR ~/.local/share/JetBrains/IntelliJIdea2021.3 resources/idea-config/plugins
 
 #### (Optional) Update box
 
-If you have previously downloaded [jcaraballo/ubuntu-desktop-focal](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-focal) you might want to update to the latest version with
+If you have previously downloaded [jcaraballo/ubuntu-desktop-jammy](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-jammy) you might want to update to the latest version with
 ```
-vagrant box update --box jcaraballo/ubuntu-desktop-focal
+vagrant box update --box jcaraballo/ubuntu-desktop-jammy
 ```
 
 #### (Optional) Tweak the memory and cpus
