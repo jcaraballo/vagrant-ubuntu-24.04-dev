@@ -91,18 +91,14 @@ ${BOOT}/620-install-heroku-cli.bash
 heading 'Installing gsutil'
 sudo -Hu vagrant ${BOOT}/630-as-vagrant-install-gsutil.bash
 
-heading 'Installing Docker CE'
-${BOOT}/701-install-docker-ce.bash vagrant
 
-heading 'Installing Docker Compose'
-${BOOT}/702-as-root-install-docker-compose.bash "$DOCKER_COMPOSER_VERSION"
-
-heading 'Installing Docker Machine'
-${BOOT}/703-as-root-install-docker-machine.bash "$DOCKER_MACHINE_VERSION"
+heading 'Installing Docker CE and Docker Compose'
+${BOOT}/701-as-root-install-docker-ce-and-docker-compose.bash
 
 heading 'Installing Docker Rootless'
 ${BOOT}/705-as-root-install-docker-rootless-dependency-uidmap.bash
 sudo -Hu vagrant ${BOOT}/706-as-vagrant-install-docker-rootless.bash
+${BOOT}/707-as-root-enable-linger-for-vagrant-user-for-docker-rootless.bash
 
 heading 'Installing PostgreSQL 10 and PostGIS'
 ${BOOT}/710-install-postgresql-10-and-postgis.bash

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-curl -sSL https://get.docker.com/rootless | sh
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
 
-echo "export PATH=$HOME/bin:"'$PATH' >> $HOME/.bashrc
-echo "export PATH=/sbin:"'$PATH' >> $HOME/.bashrc
-echo 'export DOCKER_HOST=unix:///run/user/1000/docker.sock' >> $HOME/.bashrc
+/usr/bin/dockerd-rootless-setuptool.sh install && \
+    echo 'export DOCKER_HOST=unix:///run/user/1000/docker.sock' >> $HOME/.bashrc && \
+    systemctl --user enable docker
 
