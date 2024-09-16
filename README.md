@@ -14,19 +14,19 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 sudo apt-get update && sudo apt-get install vagrant
 ```
 
-* [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
+* [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads) (7.0)
 ```
 echo deb '[arch=amd64]' https://download.virtualbox.org/virtualbox/debian $( lsb_release -cs ) contrib | sudo tee -a /etc/apt/sources.list
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install -y virtualbox-6.1 dkms
+sudo apt-get install -y virtualbox-7.0 dkms
 ```
 
-* VirtualBox Guest Additions (6.1.26)
+* VirtualBox Guest Additions (7.0.20)
 ```
-wget https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack
-VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack
+wget https://download.virtualbox.org/virtualbox/7.0.20/Oracle_VM_VirtualBox_Extension_Pack-7.0.20.vbox-extpack
+VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.20.vbox-extpack
 ```
 
 ## Usage
