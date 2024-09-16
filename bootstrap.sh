@@ -100,9 +100,6 @@ ${BOOT}/705-as-root-install-docker-rootless-dependency-uidmap.bash
 sudo -Hu vagrant ${BOOT}/706-as-vagrant-install-docker-rootless.bash
 ${BOOT}/707-as-root-enable-linger-for-vagrant-user-for-docker-rootless.bash
 
-heading 'Installing PostgreSQL 10 and PostGIS'
-${BOOT}/710-install-postgresql-10-and-postgis.bash
-
 heading 'Installing Slack'
 ${BOOT}/730-install-slack.bash
 
