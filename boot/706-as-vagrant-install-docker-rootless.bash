@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# See https://docs.docker.com/engine/security/rootless/
+
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 
 /usr/bin/dockerd-rootless-setuptool.sh install && \
