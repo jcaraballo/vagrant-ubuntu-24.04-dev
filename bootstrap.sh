@@ -96,7 +96,7 @@ heading 'Installing Docker CE and Docker Compose'
 ${BOOT}/701-as-root-install-docker-ce-and-docker-compose.bash
 
 heading 'Installing Docker Rootless'
-${BOOT}/705-as-root-install-docker-rootless-dependency-uidmap.bash
+${BOOT}/705-as-root-install-docker-rootless-dependencies.bash
 sudo -Hu vagrant ${BOOT}/706-as-vagrant-install-docker-rootless.bash
 ${BOOT}/707-as-root-enable-linger-for-vagrant-user-for-docker-rootless.bash
 
