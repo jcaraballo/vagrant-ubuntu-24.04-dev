@@ -57,7 +57,9 @@ For example, if you want the guest VM to use a copy of the host VM (warning: tha
 
 ```
 mkdir -p resources/ssh-keys
-cp -i ~/.ssh/id_rsa ~/.ssh/id_rsa.pub resources/ssh-keys/
+cp -i ~/.ssh/id_ed25519 ~/.ssh/id_ed25519.pub resources/ssh-keys/
+# Or, if you're still using RSA keys
+# cp -i ~/.ssh/id_rsa ~/.ssh/id_rsa.pub resources/ssh-keys/
 ```
 
 If the directory is not present or the private key is not there, no ssh keys will be set up
@@ -72,18 +74,21 @@ E.g. to copy the name and email from the global git configuration of the host:
 mkdir -p resources/git
 git config --global user.email >resources/git/email
 git config --global user.name  >resources/git/name
+# Or, if you prefer to use the local config as the global one in the VM:
+# git config user.email >resources/git/email
+# git config user.name  >resources/git/name
 ```
 
 #### (Optional) Provide IntelliJ Idea configuration
 
 Add the configuration directory to `resources/idea-config/config` and the plugins to `resources/idea-config/plugins`
 
-For example, to copy the configuration from a host with Idea 2021.3 we would do:
+For example, to copy the configuration from a host with Idea 2024.2 we would do:
 ```
 mkdir -p resources/idea-config/config
-cp -iR ~/.config/JetBrains/IntelliJIdea2021.3 resources/idea-config/config/
+cp -iR ~/.config/JetBrains/IntelliJIdea2024.2 resources/idea-config/config/
 mkdir -p resources/idea-config/plugins
-cp -iR ~/.local/share/JetBrains/IntelliJIdea2021.3 resources/idea-config/plugins/
+cp -iR ~/.local/share/JetBrains/IntelliJIdea2024.2 resources/idea-config/plugins/
 ```
 
 #### (Optional) Update box
