@@ -7,14 +7,14 @@ created as described in [its GitHub project](https://github.com/jcaraballo/vagra
 
 ## Requirements
 
-* [Vagrant](https://www.vagrantup.com/downloads.html)
+### [Vagrant](https://www.vagrantup.com/downloads.html)
 ```
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 sudo apt-get update && sudo apt-get install vagrant
 ```
 
-* [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads) (7.0)
+### [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads) (7.0)
 Note currently latest VirtualBox 7.1 is not compatible with latest Vagrant 2.4.1
 ```
 echo deb '[arch=amd64]' https://download.virtualbox.org/virtualbox/debian $( lsb_release -cs ) contrib | sudo tee -a /etc/apt/sources.list
@@ -24,7 +24,7 @@ sudo apt-get update
 sudo apt-get install -y virtualbox-7.0 dkms
 ```
 
-* VirtualBox Guest Additions (7.0.20)
+### VirtualBox Guest Additions (7.0.20)
 ```
 wget https://download.virtualbox.org/virtualbox/7.0.20/Oracle_VM_VirtualBox_Extension_Pack-7.0.20.vbox-extpack
 VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.20.vbox-extpack
