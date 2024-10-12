@@ -15,6 +15,7 @@ sudo apt-get update && sudo apt-get install vagrant
 ```
 
 * [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads) (7.0)
+Note currently latest VirtualBox 7.1 is not compatible with latest Vagrant 2.4.1
 ```
 echo deb '[arch=amd64]' https://download.virtualbox.org/virtualbox/debian $( lsb_release -cs ) contrib | sudo tee -a /etc/apt/sources.list
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
