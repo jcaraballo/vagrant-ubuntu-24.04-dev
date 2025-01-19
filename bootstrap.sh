@@ -121,6 +121,6 @@ ${BOOT}/772-as-root-install-cloudfoundry-cli.bash
 heading 'Installing nix with flakes'
 ${BOOT}/780-as-root-install-nix-multi-user-with-flakes.bash
 
-heading 'Installing Chinese Hong Kong Cantonese Jyutping input support'
-${BOOT}/810-as-root-install-chinese-hongkong-jyutping-input.bash
+#heading 'Installing Chinese Hong Kong Cantonese Jyutping input support'
+#${BOOT}/810-as-root-install-chinese-hongkong-jyutping-input.bash
 
